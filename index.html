@@ -69,6 +69,17 @@
            letter-spacing:-.02em;color:#fff}
   #marca span{font:500 10px/1 "Encode Sans Condensed","Encode Sans",sans-serif;
               letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  /* Volta para o painel com todos os estúdios. Em faixa própria, e não ao lado
+     do título: o painel tem 318px e os títulos são longos — disputando a mesma
+     linha, o nome do estúdio quebrava em duas. */
+  #marca .voltar{display:flex;align-items:center;gap:7px;padding:8px 15px;
+                 background:var(--painel);border-bottom:1px solid var(--linha);
+                 text-decoration:none;
+                 font:600 9.5px/1 "Encode Sans Condensed","Encode Sans",sans-serif;
+                 letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
+                 transition:color .15s,background .15s}
+  #marca .voltar:hover{color:#fff;background:var(--painel-alto)}
+  #marca .voltar svg{width:11px;height:11px;fill:currentColor;flex:none}
 
   .abas{display:flex;position:sticky;top:0;background:var(--painel);z-index:5;
         border-bottom:1px solid var(--linha)}
@@ -206,6 +217,7 @@
   <div id="marca">
     <div class="onda"></div>
     <div class="nome"><b>ESTÚDIO DE ADESIVAÇOS</b><span>MR 22</span></div>
+    <a class="voltar" href="https://silasrcha.github.io/painel-estudios/" title="Voltar para o painel com todos os estúdios"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.3 3.3 5.6 8l4.7 4.7 1.1-1.1L7.8 8l3.6-3.6z"/></svg>Ferramentas</a>
   </div>
   <div class="abas">
     <button data-p="pFoto" class="on">Foto</button>
